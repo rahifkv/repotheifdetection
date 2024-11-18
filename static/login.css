@@ -1,0 +1,41 @@
+label{
+    color: black;
+}
+body{
+background-color: blue;
+background-repeat: no-repeat;
+background-size: cover;
+}
+form{
+    margin-top:250px;
+    margin-left:550px;
+    background-color:rgba(0, 0, 0, 0.5);
+    border: 3px;
+    border-color: rgb(128, 111, 111);
+    width: 280px;
+    height: 200px;
+    padding-left:80px;
+    padding-top: 10px;
+}
+button{
+    margin-left: 90px;
+    margin-top: 5px;
+    padding: 10px;
+    border-radius: 3px;
+}
+input{
+    margin-top: 15px;
+    width:220px;
+    border-radius: 10px;
+    border:none;
+    padding: 10px;
+}
+label{
+    font-family: serif;
+}
+button:hover{
+    background-color: rgb(81, 67, 62);
+}
+input:hover{
+    background-color: rgb(92, 49, 95);
+}

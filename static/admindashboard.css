@@ -1,0 +1,38 @@
+body{
+    background-image: url(img.jpg);
+}
+.container{
+    height: 500px;
+    width: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 500px;
+    margin-top: 60px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.container button{
+    justify-content: center;
+    height: 170px;
+    width: 150px;
+    margin-top: 40px;
+    margin-left: 70px;
+}
+.container button a{
+    text-decoration: none;
+}
+.nav{
+    background-color: rgb(82, 53, 53);
+    height: 100PX;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.nav .btn{
+    height: 30px;
+    width: 70px;
+    margin: 30px;
+}
+button:hover{
+    background-color: cadetblue;
+}
