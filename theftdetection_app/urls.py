@@ -4,7 +4,7 @@ from django.urls import path
 
 from theftdetection_app.views import *
 urlpatterns = [
-    path('',Loginpage.as_view(),name="login"),
+    path('login/',Loginpage.as_view(),name="login"),
     path('addcriminals',AddCriminals.as_view(),name="addcriminals"),
     path('addpolicestation',AddPoliceStation.as_view(),name="addpolicestation"),
     path('viewcriminals',ViewCriminals.as_view(),name="viewcriminals"),

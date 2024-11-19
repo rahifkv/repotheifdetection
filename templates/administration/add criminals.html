@@ -1,28 +1,40 @@
-<!DOCTYPE html>
+{%load static%}
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="crimnal.css">
+    <link rel="stylesheet" href="{% static 'criminals.css' %}">
 </head>
 <body>
-    <form>
-        
-        <input type="text" placeholder="NAME">
+    <form action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="text" placeholder="NAME" value="Name">
         <br>
-        <input type="text" placeholder="PHONE NUMBER">
+        <input type="file" placeholder="photo" value="photo">
         <br>
-        <input type="text" placeholder="E-MAIL">
+        <input type="text" placeholder="PHONE NUMBER" name="phonenumber">
         <br>
-        <input type="text" placeholder="ADDRESS">
+        <input type="text" placeholder="E-MAIL" name="email">
         <br>
-        <input type="text" placeholder="PINCODE">
+        <input type="text" placeholder="ADDRESS" name="Address">
         <br>
-        <input type="text" placeholder="PREVIOUS CASES">
+        <input type="text" placeholder="PREVIOUS CASES" name="previous_cases">
         <br>
-        <input type="text" placeholder="CATEGORY">
+        <input type="text" placeholder="CATEGORY" name="category_of_crime">
+        <br><br>
+        <select name="" class="select">
+            <option value="police" selected disabled>--Select--</option>
+            <option value="police">police1</option>
+            <option value="police">police1</option>
+            <option value="police">police1</option>
+            <option value="police">police1</option>
+
+        </select>
         <br>
+        <label for="">Image</label>
+        <input type="file" name="" id="">
         <br>
         <button>ADD</button>
     </form>

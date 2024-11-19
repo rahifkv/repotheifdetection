@@ -21,42 +21,24 @@
                 <th>ph.no</th>
                 <th>E-MAIL</th>
                 <th>address</th>
-                <th>pincode</th>
-                <th></th>
+                <th>category_of_crime</th>
+                <th>previous_case</th>
             </tr>
 
     </thead>
     <tbody>
+        {% for i in val %}
         <tr>
-            <td>1</td>
-            <td>NAME</td>
-            <td>ph.no</td>
-            <td>E-MAIL</td>
-            <td>address</td>
-            <td>PINCODE</td>
-            <td>category of crime</td>
-            <td>previous case</td>
+            <td>{{ forloop.counter }}</td>
+            <td>{{ i.Name }}</td>
+            <td>{{ i.phonenumber }}</td>
+            <td>{{ i.email }}</td>
+            <td>{{ i.Address }}</td>
+            <td>{{ i.category_of_crime }}</td>
+            <td>{{ i.previous_cases }}</td>
         </tr>
-        <tr>
-            <td>2</td>
-            <td>NAME</td>
-            <td>ph.no</td>
-            <td>E-MAIL</td>
-            <td>address</td>
-            <td>PINCODE</td>
-            <td>category of crime</td>
-            <td>previous case</td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td>NAME</td>
-            <td>ph.no</td>
-            <td>E-MAIl</td>
-            <td>address</td>
-            <td>PINCODE</td>
-            <td>category of crime</td>
-            <td>previous case</td>
-        </tr>
+        {% endfor %}
+       
 
     </tbody>
 

@@ -1,0 +1,54 @@
+label{
+    color: black;
+}
+body{
+background-image: url(1.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+}
+form{
+    margin-top:110px;
+    margin-left:550px;
+    background-color:rgb(36, 93, 124);
+    border: 3px;
+    border-color: black;
+    width: 280px;
+    height: 450px;
+    padding-left:80px;
+    padding-top: 10px;
+}
+button{
+    margin-left: 80px;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 3px;
+}
+input{
+    margin-top: 15px;
+    width:200px;
+    border-radius: 10px;
+    border:none;
+    padding: 10px;
+}
+label{
+    font-family: serif;
+}
+button:hover{
+    background-color: rgb(115, 54, 32);
+}
+input:hover{
+    background-color: rgb(96, 19, 102);
+}
+
+.select{
+    
+    width:220px;
+    border-radius: 10px;
+    padding: 10px;
+    border: none;
+}
+
+.select:hover{
+        background-color:rgb(37, 76, 96);
+    }
+

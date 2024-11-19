@@ -1,5 +1,5 @@
 {%load static%}
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,14 +8,13 @@
     <link rel="stylesheet" href="{% static 'login.css' %}">
 </head>
 <body>
-    <form>
-        
-        <input type="text" placeholder="USERNAME">
+    <form method="post">
+        {% csrf_token %}
+        <input type="text" placeholder="USERNAME" name="username">
         <br>
-        <input type="text" placeholder="Password">
+        <input type="text" placeholder="Password" name="password">
         <br>
-        <br>
-        <button>LOGIN</button>
+        <button type="submit">LOGIN</button>
     </form>
     
 </body>

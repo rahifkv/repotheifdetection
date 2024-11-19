@@ -1,3 +1,4 @@
+{%load static%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +7,7 @@
     <title>Document</title>
 
 
-<link rel="stylesheet" href="policestation.css">
+<link rel="stylesheet" href="{% static 'policestation.css' %}">
 
 
 </head>
@@ -23,35 +24,23 @@
                 <th>pincode</th>
                 <th></th>
             </tr>
-
     </thead>
     <tbody>
+        {% for i in val %}
         <tr>
-            <td>1</td>
-            <td>NAME</td>
-            <td>ph.no</td>
-            <td>E-MAIL</td>
-            <td>address</td>
-            <td>PINCODE</td>
-            <td><button>Edit</button> <button>Delete</button></td>
+            <td>{{ forloop.counter }}</td>
+            <td>{{ i.Name }}</td>
+            <td>{{ i.phonenumber }}</td>
+            <td>{{ i.email }}</td>
+            <td>{{ i.location }}</td>
+            <td>{{ i.pincode }}</td>
+            <td><button>Edit</button> 
+                <button>Delete</button>
+            </td>
         </tr>
+        {% endfor %}
         <tr>
-            <td>2</td>
-            <td>NAME</td>
-            <td>ph.no</td>
-            <td>E-MAIL</td>
-            <td>address</td>
-            <td>PINCODE</td>
-            <td><button>Edit</button><button>Delete</button></td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td>NAME</td>
-            <td>ph.no</td>
-            <td>E-MAIl</td>
-            <td>address</td>
-            <td>PINCODE</td>
-            <td><button>Edit</button><button>Delete</button></td>
+            <a href="/addpolicestation">add police station</a>
         </tr>
 
     </tbody>
