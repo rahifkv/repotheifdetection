@@ -11,6 +11,9 @@ body{
     background-color: rgba(0, 0, 0, 0.5);
 }
 .container button{
+    font-size: 15px;
+    font-family: cursive;
+    background-color: rgb(193, 192, 191);
     justify-content: center;
     height: 170px;
     width: 150px;
@@ -34,5 +37,8 @@ body{
     margin: 30px;
 }
 button:hover{
-    background-color: cadetblue;
+    background-color: rgb(27, 72, 73);
+}
+.btn a{
+    text-decoration:none;
 }

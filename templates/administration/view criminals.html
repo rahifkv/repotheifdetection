@@ -8,6 +8,8 @@
 
 
 <link rel="stylesheet" href="{% static 'viewcriminals.css' %}">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
 
 
 </head>
@@ -23,6 +25,7 @@
                 <th>address</th>
                 <th>category_of_crime</th>
                 <th>previous_case</th>
+                <th></th>
             </tr>
 
     </thead>
@@ -36,6 +39,11 @@
             <td>{{ i.Address }}</td>
             <td>{{ i.category_of_crime }}</td>
             <td>{{ i.previous_cases }}</td>
+            <td>
+                <a href="/addcriminals"><i class='bx bx-message-square-add  icon' style="color: aquamarine; font-size: 24px;"></i></a>
+                <a href="delete_criminals/{{ i.LOGIN.id }}"><i class='bx bx-message-square-minus' style="color: chartreuse; font-size: 24px;"></i></a>
+
+            </td>
         </tr>
         {% endfor %}
        

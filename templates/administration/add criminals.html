@@ -10,11 +10,13 @@
 <body>
     <form action="" method="post" enctype="multipart/form-data">
         {% csrf_token %}
-        <input type="text" placeholder="NAME" value="Name">
+        <input type="text" placeholder="NAME" value="Name" name="Name">
         <br>
-        <input type="file" placeholder="photo" value="photo">
+        <input type="file" placeholder="photo" value="photo" name="photo">
         <br>
         <input type="text" placeholder="PHONE NUMBER" name="phonenumber">
+        <br>
+        <input type="text" placeholder="id_proof" name="id_proof">
         <br>
         <input type="text" placeholder="E-MAIL" name="email">
         <br>
@@ -24,18 +26,15 @@
         <br>
         <input type="text" placeholder="CATEGORY" name="category_of_crime">
         <br><br>
-        <select name="" class="select">
-            <option value="police" selected disabled>--Select--</option>
-            <option value="police">police1</option>
-            <option value="police">police1</option>
-            <option value="police">police1</option>
-            <option value="police">police1</option>
-
+        <select name="police_id" class="select">
+            <option selected disabled>--Select--</option>
+            {%for i in val%}
+            <option value="{{ i.id }}">{{ i.Name}}</option>
+            {% endfor %}
+           
         </select>
         <br>
-        <label for="">Image</label>
-        <input type="file" name="" id="">
-        <br>
+       
         <button>ADD</button>
     </form>
     

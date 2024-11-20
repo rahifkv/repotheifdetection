@@ -19,11 +19,17 @@ class Loginpage(View):
     
 class AddCriminals(View):
     def get(self,request):
-        return render(request,"administration/add criminals.html")
+        obj=PoliceTable.objects.all()
+        return render(request,"administration/add criminals.html",{'val':obj})
     def post(self,request):
-        form=Addcriminalsform(request.POST)
+        form=Addcriminalsform(request.POST, request.FILES)
         if form.is_valid():
-            form.save()
+            f=form.save(commit=False)
+            f.POLICESTATION = PoliceTable.objects.get(id=request.POST['police_id'])
+            f.save()
+            return render(request,'administration/admindashboard.html')
+
+
 
 
 class AddPoliceStation(View):
@@ -57,7 +63,27 @@ class ViewPoliceStation(View):
     def get(self,request):
         obj = PoliceTable.objects.all()
         return render(request,"administration/view police station.html", {'val': obj})
-    
+
+class EditPolice(View):
+    def get(self,request, police_id):
+        obj = PoliceTable.objects.get(id=police_id)
+        return render(request,"administration/edit police station.html",{'val': obj} )
+    def post(self,request, police_id):
+        obj = PoliceTable.objects.get(id=police_id)
+        form=Addpoliceform(request.POST, instance=obj)
+        if form.is_valid():
+            form.save()
+            return redirect('viewpolicestation')
+
+class deletepolice(View):
+    def get(self,request, police_id):
+        obj = LoginTable.objects.get(id=police_id)
+        obj.delete()
+        return redirect('viewpolicestation')
+        
+
+
+
 class ViewUser(View):
     def get(self,request):
          obj = UserTable.objects.all()

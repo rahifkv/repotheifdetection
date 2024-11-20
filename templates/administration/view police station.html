@@ -8,6 +8,8 @@
 
 
 <link rel="stylesheet" href="{% static 'policestation.css' %}">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
 
 
 </head>
@@ -34,13 +36,16 @@
             <td>{{ i.email }}</td>
             <td>{{ i.location }}</td>
             <td>{{ i.pincode }}</td>
-            <td><button>Edit</button> 
-                <button>Delete</button>
+            <td>
+
+                <a href="edit_police/{{ i.id }}"><i class='bx bx-edit' style="color: chartreuse; font-size: 24px;"></i></a>
+                <a href="delete_police/{{ i.LOGIN.id }}"><i class='bx bx-message-square-minus' style="color: chartreuse; font-size: 24px;"></i></a>
+
             </td>
         </tr>
         {% endfor %}
         <tr>
-            <a href="/addpolicestation">add police station</a>
+            <a href="/addpolicestation"><i class='bx bx-message-square-add  icon' style="color: aquamarine; font-size: 24px;"></i></a>
         </tr>
 
     </tbody>

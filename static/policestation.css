@@ -7,6 +7,7 @@ body{
     justify-content: center;
     height: 100vh;
     align-items: center;
+    position: relative;
     }
 
 
@@ -17,7 +18,7 @@ table{
    width: 45%;
     border-collapse: collapse;
     margin-bottom:20px ;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
 button:hover{
@@ -25,8 +26,14 @@ button:hover{
 }
 
 table,th,td{
-    border: 2px solid rgb(153, 31, 209);
+    border: 2px solid rgb(31, 156, 209);
     color:white;
     font-weight: bold;
     padding: 10px;
+}
+
+.icon{
+    position: absolute;
+    top: 230px;
+    right: 350px;
 }
