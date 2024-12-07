@@ -1,0 +1,29 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'criminals.css' %}">
+</head>
+<body>
+    <form action="" method="post">
+        {% csrf_token %}
+        
+        <input type="text" placeholder="NAME" name="Name">
+        <br>
+        <input type="text" placeholder="PHONE NUMBER" name="phonenumber" value="{{fom.phonenumber}}">
+        <br>
+        <input type="text" placeholder="E-MAIL" name="email">
+        <br>
+        <input type="text" placeholder="category_of_crime" name="categoryofcrime">
+        <br>
+        <input type="text" placeholder="previous_case" name="previouscase">
+        <br>
+        <br>
+        <button type="submit">submit</button>
+    </form>
+    
+</body>
+</html>

@@ -10,13 +10,15 @@
 <body>
     <div class="nav">
         <h1>ADMIN PAGE</h1>
-       <button class="btn"><a href="{% url 'login' %}">Logout</a> </button>
+       <button class="btn"><a href="{% url 'login' %}">Logout</a>  
     </div>
     <div class="container">
-       <button> <a href="/viewpolicestation">Police Station</a></button>
-       <button> <a href="/viewcriminals">criminals</a></button>
-       <button> <a href="/viewdetectiondetails">view detection</a></button>
-       <button> <a href="/viewuser">user</a></button>
+       <a href="/viewpolicestation" class="main-btn">
+        <div class="main-div">Police Station</div>
+       </a>
+         <a href="/viewcriminals" class="main-btn"><div class="main-div">criminals</div></a> 
+         <a href="/viewdetectiondetails" class="main-btn"><div class="main-div">view detection</div></a> 
+         <a href="/viewuser" class="main-btn"><div class="main-div">user</div></a> 
    
 
 

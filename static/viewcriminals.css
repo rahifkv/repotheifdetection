@@ -4,9 +4,21 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     height: 100vh;
     align-items: center;
+    }
+
+.back-btn{
+        text-decoration: none;
+        background-color: rgba(28, 51, 73, 0.8);
+        padding: 8px 13px;
+        border-radius: 10px;
+        color:  rgb(16, 192, 165);
+        position:absolute;
+        top: 10px;
+        left: 10px;
     }
 
 table{

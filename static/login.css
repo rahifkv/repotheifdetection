@@ -23,6 +23,10 @@ button{
     padding: 10px;
     border-radius: 3px;
 }
+.forget{
+    text-decoration: none;
+    color: aquamarine;
+}
 input{
     margin-top: 15px;
     width:220px;

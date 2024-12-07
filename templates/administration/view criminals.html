@@ -1,4 +1,4 @@
-{%load static%}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,11 +9,16 @@
 
 <link rel="stylesheet" href="{% static 'viewcriminals.css' %}">
 <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
 
 
 
 </head>
 <body>
+    <a href="#" class="back-btn" onclick="history.back()"> <i class="fa-solid fa-arrow-left"></i></a>
+   <div style="text-align: right;">
+    <a href="/addcriminals" ><i class='bx bx-message-square-add  icon' style="color: aquamarine; font-size: 24px;"></i></a>
+
     <table>
         
         <thead>
@@ -40,16 +45,20 @@
             <td>{{ i.category_of_crime }}</td>
             <td>{{ i.previous_cases }}</td>
             <td>
-                <a href="/addcriminals"><i class='bx bx-message-square-add  icon' style="color: aquamarine; font-size: 24px;"></i></a>
-                <a href="delete_criminals/{{ i.LOGIN.id }}"><i class='bx bx-message-square-minus' style="color: chartreuse; font-size: 24px;"></i></a>
+               
+                <a href="delete_criminals/{{ i.LOGIN.id }}"  onclick="return confirm('Are you sure you want to delete this item?')"><i class="fa-solid fa-trash" style="color: rgb(0, 255, 251); font-size: 24px;"></i></a>
+
 
             </td>
         </tr>
         {% endfor %}
+    
+
        
 
     </tbody>
 
 </table>
+</div>
 </body>
 </html>

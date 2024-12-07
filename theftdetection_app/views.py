@@ -81,7 +81,11 @@ class deletepolice(View):
         obj.delete()
         return redirect('viewpolicestation')
         
-
+class deletecriminals(View):
+    def get(self,request, criminal_id):
+        obj = LoginTable.objects.get(id=criminal_id)
+        obj.delete()
+        return redirect('viewcriminals')
 
 
 class ViewUser(View):
